@@ -18,5 +18,4 @@ main(){
 		factorial *= i;
 	}
 	cout<< "El factorial de "<< n<< " es "<< factorial <<endl;
-	goto main;
 } 
