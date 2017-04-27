@@ -5,7 +5,8 @@ using namespace std;
 
 
 main(){ 
-	int n,factorial;
+	int n;
+	double factorial;
 	n = 0;
 	while(n<=0){										
 		cout<< "Ingrese un numero natural"<<endl;		//Con este bucle filtro los enteros negativos y al 0
