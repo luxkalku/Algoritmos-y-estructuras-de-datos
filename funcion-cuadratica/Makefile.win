@@ -1,0 +1,29 @@
+# Project: Project1
+# Makefile created by Dev-C++ 5.4.2
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = funcion-cuadratica.o
+LINKOBJ  = funcion-cuadratica.o
+LIBS     = -L"C:/Users/Jere/Desktop/Facultad/Algoritmos/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Users/Jere/Desktop/Facultad/Algoritmos/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+CXXINCS  = -I"C:/Users/Jere/Desktop/Facultad/Algoritmos/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+BIN      = funcion-cuadratica.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+funcion-cuadratica.o: funcion-cuadratica.cpp
+	$(CPP) -c funcion-cuadratica.cpp -o funcion-cuadratica.o $(CXXFLAGS)
